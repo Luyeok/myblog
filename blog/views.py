@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 # Django中，所有的请求都需要函数处理；
 def index(request):
-    return HttpResponse("Hello, world!")
+    return render(request,'index.html',{'hello':'Hello,Blog!'})
 
 
 # Create your views here.
