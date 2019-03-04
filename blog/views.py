@@ -10,5 +10,9 @@ def index(request):
     # 这里，objects.all()返回的是一个查询的集合对象；
     return render(request, 'blog/index.html', {'articles': articles})
 
+def article_page(request,article_id):
+    article= models.Article.objects.get(pk=article_id)
+    return render(request,'blog/article_page.html',{'article':article})
+
 
 # Create your views here.

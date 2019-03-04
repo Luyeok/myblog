@@ -18,6 +18,8 @@ from . import views
 
 # 所有的url；
 # 在这里设置路由；
+app_name='blog'
 urlpatterns = [
     path('', views.index),
+    path('article/<int:article_id>', views.article_page, name='article_page'),
 ]

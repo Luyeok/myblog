@@ -20,5 +20,5 @@ from django.urls import path, include
 # 在这里设置路由；
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', include('blog.urls')),
+    path('index/', include('blog.urls', namespace="blog")),
 ]
