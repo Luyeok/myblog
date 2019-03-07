@@ -4,6 +4,11 @@
 from django.contrib import admin
 from blog.models import Article
 
-admin.site.register(Article)
+# Admin 配置类
+class ArticleAdmin(admin.ModelAdmin):
+    list_display=('title','content','pub_time')
+    list_filter = ('pub_time', )
+
+admin.site.register(Article, ArticleAdmin)
 
 # Register your models here.
